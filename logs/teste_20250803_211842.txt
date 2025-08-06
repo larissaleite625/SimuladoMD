@@ -1,0 +1,12 @@
+Relatório do Teste - 2025-08-03 21:18:42
+Arquivo Base: Capítulo 4 (Completo)
+P1: Qual é a principal diferença entre os processos ETL e ELT?
+  R: ['No ETL, os dados são transformados antes do carregamento, enquanto no ELT, os dados são carregados e depois transformados.'] | G: ['No ETL, os dados são transformados antes do carregamento, enquanto no ELT, os dados são carregados e depois transformados.'] | OK
+P2: Qual serviço do Azure é recomendado para orquestrar pipelines de ingestão de dados em larga escala?
+  R: ['Azure Data Factory'] | G: ['Azure Data Factory'] | OK
+P3: Qual das alternativas abaixo descreve corretamente um data lake?
+  R: ['Um armazenamento de arquivos em um sistema de arquivos distribuído, sem imposição de esquema durante a gravação.'] | G: ['Um armazenamento de arquivos em um sistema de arquivos distribuído, sem imposição de esquema durante a gravação.'] | OK
+P4: O que é um esquema em estrela no contexto de modelagem de dados analíticos?
+  R: ['Um esquema com uma tabela de fatos central relacionada a múltiplas tabelas de dimensões.'] | G: ['Um esquema com uma tabela de fatos central relacionada a múltiplas tabelas de dimensões.'] | OK
+P5: Qual das seguintes opções é uma característica do Delta Lake?
+  R: ['Adiciona consistência transacional e aplicação de esquema a um data lake.'] | G: ['Adiciona consistência transacional e aplicação de esquema a um data lake.'] | OK

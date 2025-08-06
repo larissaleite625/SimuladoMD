@@ -1,0 +1,12 @@
+Relatório do Teste - 2025-08-03 21:11:54
+Arquivo Base: 1.1 Explore os principais conceitos de dados.md
+P1: Qual das alternativas abaixo melhor descreve dados estruturados?
+  R: ['Dados que seguem um esquema fixo, com campos ou propriedades consistentes, geralmente armazenados em tabelas.'] | G: ['Dados que seguem um esquema fixo, com campos ou propriedades consistentes, geralmente armazenados em tabelas.'] | OK
+P2: Qual formato de arquivo é comumente utilizado para dados semiestruturados?
+  R: ['JSON'] | G: ['JSON'] | OK
+P3: Qual das seguintes opções é um exemplo de dados não estruturados?
+  R: ['Um arquivo CSV com delimitadores.'] | G: ['Um arquivo de vídeo.'] | X
+P4: Qual característica é essencial para sistemas OLTP?
+  R: ['Operações de leitura e gravação rápidas com garantia ACID.'] | G: ['Operações de leitura e gravação rápidas com garantia ACID.'] | OK
+P5: Qual é a principal diferença entre um data warehouse e um data lakehouse?
+  R: ['O data warehouse é usado apenas para dados transacionais, enquanto o data lakehouse é para dados analíticos.'] | G: ['O data lakehouse combina armazenamento escalonável de data lake com semântica de consulta relacional de data warehouse.'] | X

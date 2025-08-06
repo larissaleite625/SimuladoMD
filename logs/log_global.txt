@@ -1,0 +1,48 @@
+--- TESTE REALIZADO EM 2025-08-03 19:50:12 ---
+Arquivo: 1.1 Explore os principais conceitos de dados.md
+Resultado: 4 acertos, 1 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 20:01:26 ---
+Arquivo: 1.2 Explorar funções e serviços de dados.md
+Resultado: 2 acertos, 3 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 20:19:35 ---
+Arquivo: 2.1 Explorar conceitos fundamentais de dados relacionais.md
+Resultado: 4 acertos, 1 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 20:27:47 ---
+Arquivo: 4.1 Explorar os conceitos básicos da análise em larga escala.md
+Resultado: 5 acertos, 0 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 20:44:24 ---
+Arquivo: 3.1 Introdução aos dados não relacionais do Microsoft Azure Data no Azure.md
+Resultado: 2 acertos, 3 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 20:48:22 ---
+Arquivo: Capítulo 3 (Completo)
+Resultado: 3 acertos, 2 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 21:11:54 ---
+Arquivo: 1.1 Explore os principais conceitos de dados.md
+Resultado: 3 acertos, 2 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 21:14:54 ---
+Arquivo: Capítulo 1 (Completo)
+Resultado: 4 acertos, 1 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 21:18:42 ---
+Arquivo: Capítulo 4 (Completo)
+Resultado: 5 acertos, 0 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 21:20:35 ---
+Arquivo: Capítulo 2 (Completo)
+Resultado: 4 acertos, 1 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 21:27:54 ---
+Arquivo: Capítulo 3 (Completo)
+Resultado: 3 acertos, 2 erros de 5 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-03 21:43:05 ---
+Arquivo: Capítulo 3 (Completo)
+Resultado: 8 acertos, 2 erros de 10 perguntas.
+

@@ -1,0 +1,29 @@
+Relatório do Teste - 2025-08-03 19:50:12
+Arquivo Base: 1.1 Explore os principais conceitos de dados.md
+----------------------------------------
+
+Pergunta 1: Qual das seguintes opções descreve corretamente dados semiestruturados?
+  - Resposta do usuário: ['Dados que têm alguma estrutura, mas permitem variação entre instâncias, como JSON.']
+  - Resposta correta: ['Dados que têm alguma estrutura, mas permitem variação entre instâncias, como JSON.']
+  - Resultado: Correto
+
+Pergunta 2: Qual formato de arquivo é baseado em colunas e foi desenvolvido para otimizar operações no Apache Hive?
+  - Resposta do usuário: ['JSON']
+  - Resposta correta: ['ORC']
+  - Resultado: Incorreto
+
+Pergunta 3: Qual das seguintes propriedades faz parte da semântica ACID em sistemas OLTP?
+  - Resposta do usuário: ['Atomicidade']
+  - Resposta correta: ['Atomicidade']
+  - Resultado: Correto
+
+Pergunta 4: Qual tipo de banco de dados não relacional armazena entidades como nós com links para definir relações?
+  - Resposta do usuário: ['Banco de dados de grafo']
+  - Resposta correta: ['Banco de dados de grafo']
+  - Resultado: Correto
+
+Pergunta 5: O que é um Data Lakehouse?
+  - Resposta do usuário: ['Uma combinação de armazenamento flexível de um data lake com a semântica de consulta relacional de um data warehouse.']
+  - Resposta correta: ['Uma combinação de armazenamento flexível de um data lake com a semântica de consulta relacional de um data warehouse.']
+  - Resultado: Correto
+

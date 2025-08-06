@@ -1,0 +1,12 @@
+Relatório do Teste - 2025-08-03 21:14:54
+Arquivo Base: Capítulo 1 (Completo)
+P1: Qual das seguintes opções melhor descreve dados semiestruturados?
+  R: ['Dados que têm alguma estrutura, mas permitem variação entre instâncias, como JSON.'] | G: ['Dados que têm alguma estrutura, mas permitem variação entre instâncias, como JSON.'] | OK
+P2: Qual é a principal característica dos sistemas OLTP?
+  R: ['São otimizados para operações de leitura e gravação rápidas.'] | G: ['São otimizados para operações de leitura e gravação rápidas.'] | OK
+P3: Qual formato de arquivo é baseado em colunas e otimizado para armazenar e processar tipos de dados aninhados com eficiência?
+  R: ['ORC'] | G: ['Parquet'] | X
+P4: Qual dos seguintes serviços do Azure é um banco de dados não relacional (NoSQL) de escala global que suporta múltiplas APIs?
+  R: ['Azure Cosmos DB'] | G: ['Azure Cosmos DB'] | OK
+P5: Qual das seguintes propriedades faz parte da semântica ACID em sistemas transacionais?
+  R: ['Atomicidade – cada transação é tratada como uma única unidade, que é totalmente bem-sucedida ou que falha completamente.'] | G: ['Atomicidade – cada transação é tratada como uma única unidade, que é totalmente bem-sucedida ou que falha completamente.'] | OK

@@ -1,0 +1,22 @@
+Relatório do Teste - 2025-08-03 21:43:05
+Arquivo Base: Capítulo 3 (Completo)
+P1: Qual é o tamanho máximo de um blob de blocos no Armazenamento de Blobs do Azure?
+  R: ['190.7 TiB'] | G: ['190.7 TiB'] | OK
+P2: Qual camada de acesso no Armazenamento de Blobs tem maior latência de leitura?
+  R: ['Arquivo'] | G: ['Arquivo'] | OK
+P3: O que é necessário para criar um sistema de arquivos do Azure Data Lake Storage Gen2?
+  R: ['Habilitar o namespace hierárquico em uma conta de Armazenamento do Azure'] | G: ['Habilitar o namespace hierárquico em uma conta de Armazenamento do Azure'] | OK
+P4: Qual formato de dados o Microsoft OneLake utiliza?
+  R: ['Delta Parquet'] | G: ['Delta Parquet'] | OK
+P5: Qual protocolo NÃO é suportado pelos Arquivos do Azure?
+  R: ['FTP para transferência'] | G: ['FTP para transferência'] | OK
+P6: O que compõe a chave primária no Armazenamento de Tabelas do Azure?
+  R: ['Nome da tabela e ID do item'] | G: ['Chave de partição e chave de linha'] | X
+P7: Para qual cenário o Azure Cosmos DB é MENOS adequado?
+  R: ['Jogos com tabelas de pontuação'] | G: ['Armazenamento de arquivos estáticos de website'] | X
+P8: Qual API do Azure Cosmos DB usa sintaxe SQL para consultas?
+  R: ['API para NoSQL'] | G: ['API para NoSQL'] | OK
+P9: Qual característica NÃO se aplica ao Microsoft OneLake?
+  R: ['Requer configuração manual por workspace'] | G: ['Requer configuração manual por workspace'] | OK
+P10: O que acontece ao atualizar uma conta de armazenamento para Azure Data Lake Storage Gen2?
+  R: ['É um processo unidirecional irreversível'] | G: ['É um processo unidirecional irreversível'] | OK

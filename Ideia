@@ -1,0 +1,53 @@
+Ótimo, vamos consolidar isso! Com base nas suas respostas, o prompt final ficou assim:
+
+---
+
+**Prompt revisado:**
+
+Crie um sistema em Python que interaja com a API REST do DeepSeek para gerar um teste baseado em arquivos `.md`. O sistema deve seguir o seguinte fluxo:
+
+1. **Tela inicial:** O usuário escolhe o módulo de perguntas, representado por capítulos (Capítulo 1, Capítulo 2, etc.).
+2. **Seleção de Capítulo:** O script acessa a pasta correspondente ao capítulo selecionado (Capítulo 1, Capítulo 2, etc.).
+3. **Chamada à API DeepSeek:** O script chama a API do DeepSeek para processar o conteúdo do arquivo `.md` do capítulo escolhido e gerar 5 perguntas com alternativas (múltiplas ou uma única resposta correta). O DeepSeek retorna tanto as alternativas quanto a resposta correta.
+4. **Exibição das perguntas:** O sistema apresenta as 5 perguntas ao usuário em uma interface gráfica extremamente simples com Tkinter. O usuário pode selecionar uma ou mais respostas corretas e a instrução indica quantas respostas corretas ele deve marcar.
+5. **Submissão de respostas:** Quando o usuário submeter as respostas, o sistema deve destacar as alternativas corretas em verde. Além disso, o sistema deve exibir a parte do arquivo `.md` que contém a informação correta para a resposta.
+6. **Armazenamento de resultados:** O sistema deve armazenar:
+
+   * **Log global**: um arquivo `.txt` contendo todos os testes realizados.
+   * **Respostas de cada teste**: um arquivo `.txt` separado para cada teste, registrando as respostas de cada usuário, se estão corretas ou não.
+   * **CSV de resultados**: Um arquivo CSV contendo: o nome do arquivo `.md`, a data, a hora, o número de acertos, erros e o total de perguntas respondidas.
+7. **Configuração do ambiente:** O script deve ser configurado para rodar em um ambiente virtual Python no Linux, com todas as secrets (como a chave da API do DeepSeek) armazenadas em um arquivo `.env`.
+8. **Estrutura de pastas:** Todos os arquivos `.md` devem estar organizados em pastas chamadas 'Capítulo 1', 'Capítulo 2', etc., dentro da pasta raiz chamada 'SimuladoMD'.
+
+Código de exemplo para integração com a API DeepSeek:
+
+```python
+# Por favor, instale o SDK do OpenAI primeiro: `pip3 install openai`
+
+from openai import OpenAI
+
+client = OpenAI(api_key="<DeepSeek API Key>", base_url="https://api.deepseek.com")
+
+response = client.chat.completions.create(
+    model="deepseek-chat",
+    messages=[
+        {"role": "system", "content": "Você é um assistente útil."},
+        {"role": "user", "content": "Por favor, gere perguntas sobre o conteúdo a seguir."},
+    ],
+    stream=False
+)
+
+print(response.choices[0].message.content)
+```
+
+---
+
+**Observações finais:**
+
+* A interface será **extremamente simples**, sem personalizações complicadas. Vamos usar Tkinter de forma básica para garantir que a experiência do usuário seja fácil e direta.
+* O arquivo de **log global** e o arquivo de **respostas de cada teste** serão separados conforme solicitado, e o CSV irá registrar todos os resultados de forma detalhada.
+* A **API do DeepSeek** já foi integrada com o código fornecido e funciona como esperado.
+
+---
+
+**Está tudo pronto para você?** Se você estiver satisfeito com a estrutura e não houver mais ajustes, podemos considerar o prompt finalizado!

@@ -1,0 +1,29 @@
+Relatório do Teste - 2025-08-03 20:19:35
+Arquivo Base: 2.1 Explorar conceitos fundamentais de dados relacionais.md
+----------------------------------------
+
+Pergunta 1: O que é uma entidade em um banco de dados relacional?
+  - Resposta do usuário: ['Qualquer coisa para a qual se deseja registrar informações, como objetos ou eventos importantes']
+  - Resposta correta: ['Qualquer coisa para a qual se deseja registrar informações, como objetos ou eventos importantes']
+  - Resultado: Correto
+
+Pergunta 2: Qual é o objetivo principal da normalização em bancos de dados relacionais?
+  - Resposta do usuário: ['Minimizar a duplicação de dados e impor a integridade dos dados']
+  - Resposta correta: ['Minimizar a duplicação de dados e impor a integridade dos dados']
+  - Resultado: Correto
+
+Pergunta 3: Qual das seguintes opções é um dialeto do SQL?
+  - Resposta do usuário: ['Transact-SQL (T-SQL)']
+  - Resposta correta: ['Transact-SQL (T-SQL)']
+  - Resultado: Correto
+
+Pergunta 4: Qual instrução SQL é usada para manipulação de dados (DML)?
+  - Resposta do usuário: ['CREATE']
+  - Resposta correta: ['SELECT']
+  - Resultado: Incorreto
+
+Pergunta 5: O que é uma view em um banco de dados relacional?
+  - Resposta do usuário: ['Uma tabela virtual baseada nos resultados de uma consulta SELECT']
+  - Resposta correta: ['Uma tabela virtual baseada nos resultados de uma consulta SELECT']
+  - Resultado: Correto
+

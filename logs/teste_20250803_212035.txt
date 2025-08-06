@@ -1,0 +1,12 @@
+Relatório do Teste - 2025-08-03 21:20:35
+Arquivo Base: Capítulo 2 (Completo)
+P1: Qual é a principal finalidade da normalização em bancos de dados relacionais?
+  R: ['Minimizar a duplicação de dados e impor a integridade dos dados'] | G: ['Minimizar a duplicação de dados e impor a integridade dos dados'] | OK
+P2: Qual serviço do Azure é classificado como IaaS para bancos de dados relacionais?
+  R: ['SQL Server em VMs do Azure'] | G: ['SQL Server em VMs do Azure'] | OK
+P3: Qual tipo de instrução SQL é usado para conceder ou revogar permissões em um banco de dados?
+  R: ['DCL (Data Control Language)'] | G: ['DCL (Data Control Language)'] | OK
+P4: Qual é uma característica distintiva do Banco de Dados do Azure para PostgreSQL?
+  R: ['Capacidade de armazenar tipos de dados personalizados e objetos híbridos'] | G: ['Capacidade de armazenar tipos de dados personalizados e objetos híbridos'] | OK
+P5: Qual é a principal vantagem de usar um Pool Elástico no Banco de Dados SQL do Azure?
+  R: ['Oferece controle total sobre o sistema operacional do servidor'] | G: ['Permite que bancos de dados com padrões de uso variáveis compartilhem recursos de forma eficiente'] | X

@@ -1,0 +1,12 @@
+Relatório do Teste - 2025-08-03 20:48:22
+Arquivo Base: Capítulo 3 (Completo)
+P1: Qual é o tamanho máximo de um blob de blocos no Armazenamento de Blobs do Azure?
+  R: ['190,7 TiB'] | G: ['190,7 TiB'] | OK
+P2: Qual camada de acesso no Armazenamento de Blobs do Azure tem a maior latência para leitura?
+  R: ['Premium'] | G: ['Arquivo'] | X
+P3: Qual é a principal diferença entre o Azure Data Lake Storage Gen1 e Gen2?
+  R: ['Gen2 é integrado ao Armazenamento do Azure e suporta namespace hierárquico'] | G: ['Gen2 é integrado ao Armazenamento do Azure e suporta namespace hierárquico'] | OK
+P4: Qual protocolo NÃO é suportado pelo Armazenamento de Arquivos do Azure?
+  R: ['FTP'] | G: ['FTP'] | OK
+P5: Qual é o tamanho máximo de um único arquivo no Armazenamento de Arquivos do Azure?
+  R: ['100 TB'] | G: ['1 TB'] | X

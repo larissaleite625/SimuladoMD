@@ -1,0 +1,12 @@
+Relatório do Teste - 2025-08-03 20:44:24
+Arquivo Base: 3.1 Introdução aos dados não relacionais do Microsoft Azure Data no Azure.md
+P1: Qual é o tamanho máximo de um blob de blocos no Armazenamento de Blobs do Azure?
+  R: ['100 TB'] | G: ['190,7 TiB'] | X
+P2: Qual tipo de blob é otimizado para operações de leitura e gravação aleatórias?
+  R: ['Blobs de blocos'] | G: ['Blobs de páginas'] | X
+P3: Qual camada de acesso no Armazenamento de Blobs do Azure tem a maior latência de leitura?
+  R: ['Camada Arquivo'] | G: ['Camada Arquivo'] | OK
+P4: O que é necessário para criar um sistema de arquivos do Azure Data Lake Storage Gen2?
+  R: ['Habilitar a opção de namespace hierárquico em uma conta de Armazenamento do Azure'] | G: ['Habilitar a opção de namespace hierárquico em uma conta de Armazenamento do Azure'] | OK
+P5: Qual protocolo de compartilhamento de arquivos NÃO é suportado pelos Arquivos do Azure?
+  R: ['NFS'] | G: ['FTP'] | X

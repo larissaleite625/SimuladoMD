@@ -1,0 +1,12 @@
+Relatório do Teste - 2025-08-03 21:27:54
+Arquivo Base: Capítulo 3 (Completo)
+P1: Qual é o tamanho máximo de um blob de blocos no Armazenamento de Blobs do Azure?
+  R: ['Até 190,7 TiB'] | G: ['Até 190,7 TiB'] | OK
+P2: O que caracteriza a camada 'Arquivo' no Armazenamento de Blobs do Azure?
+  R: ['Latência de leitura de milissegundos e maior custo'] | G: ['Acesso offline com latência de horas e menor custo'] | X
+P3: Como o Azure Data Lake Storage Gen2 é habilitado em uma conta de Armazenamento do Azure?
+  R: ['Ativando a opção de namespace hierárquico'] | G: ['Ativando a opção de namespace hierárquico'] | OK
+P4: Qual protocolo NÃO é suportado nativamente pelos Arquivos do Azure?
+  R: ['NFS (Network File System)'] | G: ['FTP (File Transfer Protocol)'] | X
+P5: Como o Armazenamento de Tabelas do Azure organiza dados para otimizar consultas?
+  R: ['Particionando dados por chave de partição e ordenando por chave de linha'] | G: ['Particionando dados por chave de partição e ordenando por chave de linha'] | OK

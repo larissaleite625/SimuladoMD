@@ -1,0 +1,29 @@
+Relatório do Teste - 2025-08-03 20:01:26
+Arquivo Base: 1.2 Explorar funções e serviços de dados.md
+----------------------------------------
+
+Pergunta 1: Quais são as três principais funções de trabalho que lidam com dados na maioria das organizações?
+  - Resposta do usuário: ['Administradores de Banco de Dados, Engenheiros de Dados, Analistas de Dados', 'Engenheiros de Dados, Cientistas de Dados, Administradores de Rede']
+  - Resposta correta: ['Administradores de Banco de Dados, Engenheiros de Dados, Analistas de Dados']
+  - Resultado: Incorreto
+
+Pergunta 2: Qual serviço do Azure é um banco de dados de plataforma como serviço (PaaS) totalmente gerenciado e hospedado no Azure?
+  - Resposta do usuário: ['Instância Gerenciada de SQL do Azure']
+  - Resposta correta: ['Banco de Dados SQL do Azure']
+  - Resultado: Incorreto
+
+Pergunta 3: Qual banco de dados de código aberto no Azure é comumente usado em aplicativos da pilha LAMP?
+  - Resposta do usuário: ['Azure Cosmos DB']
+  - Resposta correta: ['Banco de Dados do Azure para MySQL']
+  - Resultado: Incorreto
+
+Pergunta 4: Qual serviço do Azure permite definir e agendar pipelines de dados para transferir e transformar dados?
+  - Resposta do usuário: ['Azure Data Factory']
+  - Resposta correta: ['Azure Data Factory']
+  - Resultado: Correto
+
+Pergunta 5: Qual serviço do Azure é um sistema de banco de dados não relacional (NoSQL) de escala global?
+  - Resposta do usuário: ['Azure Cosmos DB']
+  - Resposta correta: ['Azure Cosmos DB']
+  - Resultado: Correto
+

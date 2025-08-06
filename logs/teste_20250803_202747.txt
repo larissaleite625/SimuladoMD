@@ -1,0 +1,29 @@
+Relatório do Teste - 2025-08-03 20:27:47
+Arquivo Base: 4.1 Explorar os conceitos básicos da análise em larga escala.md
+----------------------------------------
+
+Pergunta 1: Qual é a principal diferença entre os processos ETL e ELT?
+  - Resposta do usuário: ['No ETL, os dados são transformados antes de serem carregados, enquanto no ELT são copiados primeiro e depois transformados.']
+  - Resposta correta: ['No ETL, os dados são transformados antes de serem carregados, enquanto no ELT são copiados primeiro e depois transformados.']
+  - Resultado: Correto
+
+Pergunta 2: Qual das seguintes opções descreve corretamente um data warehouse?
+  - Resposta do usuário: ['Um banco de dados relacional otimizado para análise de dados, com esquemas como estrela ou floco de neve.']
+  - Resposta correta: ['Um banco de dados relacional otimizado para análise de dados, com esquemas como estrela ou floco de neve.']
+  - Resultado: Correto
+
+Pergunta 3: Qual serviço do Azure é recomendado para criar e executar pipelines de ingestão de dados?
+  - Resposta do usuário: ['Azure Data Factory ou Microsoft Fabric']
+  - Resposta correta: ['Azure Data Factory ou Microsoft Fabric']
+  - Resultado: Correto
+
+Pergunta 4: O que caracteriza um data lake?
+  - Resposta do usuário: ['Armazenamento de arquivos com esquema definido no momento da leitura, suportando dados estruturados e não estruturados.']
+  - Resposta correta: ['Armazenamento de arquivos com esquema definido no momento da leitura, suportando dados estruturados e não estruturados.']
+  - Resultado: Correto
+
+Pergunta 5: Qual é uma vantagem do Microsoft Fabric mencionada no texto?
+  - Resposta do usuário: ['Combina recursos de data warehouse relacional com a flexibilidade de um data lake e Apache Spark.']
+  - Resposta correta: ['Combina recursos de data warehouse relacional com a flexibilidade de um data lake e Apache Spark.']
+  - Resultado: Correto
+
