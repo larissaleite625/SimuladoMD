@@ -46,3 +46,11 @@ Resultado: 3 acertos, 2 erros de 5 perguntas.
 Arquivo: Capítulo 3 (Completo)
 Resultado: 8 acertos, 2 erros de 10 perguntas.
 
+--- TESTE REALIZADO EM 2025-08-12 22:01:29 ---
+Arquivo: Capítulo 1 (Completo)
+Resultado: 0 acertos, 10 erros de 10 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-12 22:17:28 ---
+Arquivo: 1.1 Explore os principais conceitos de dados.md
+Resultado: 7 acertos, 3 erros de 10 perguntas.
+

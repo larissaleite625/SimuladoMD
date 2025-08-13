@@ -79,36 +79,91 @@ def get_all_md_content_from_chapter(chapter_name):
     return "\n\n---\n\n".join(all_content)
 
 def generate_questions_from_api(content):
-    """Chama a API do DeepSeek para gerar 5 perguntas em formato JSON."""
+    """Chama a API do DeepSeek para gerar 10 perguntas em formato JSON e faz parsing robusto."""
     if not client:
         messagebox.showerror("Erro de API", "O cliente da API não foi inicializado.")
         return None
 
+    # PROMPT: obriga letras A–D e só array JSON
     prompt = f"""
-    Com base no conteúdo fornecido abaixo, gere exatamente 10 perguntas de múltipla escolha.
-    O formato da resposta DEVE ser um JSON válido, contendo uma lista de 10 objetos.
-    Cada objeto deve ter as seguintes chaves:
-    - "question": A pergunta (string).
-    - "options": Uma lista de 4 alternativas (strings).
-    - "answer": Uma lista contendo a(s) resposta(s) correta(s) (strings).
-    - "explanation_cue": Uma frase curta extraída diretamente do texto que justifica a resposta correta.
-    --- CONTEÚDO PARA ANÁLISE ---
-    {content}
-    """
+Você deve responder SOMENTE com um array JSON (sem texto fora do array). O array deve ter exatamente 10 objetos.
+Cada objeto terá as chaves:
+- "question": string
+- "options": array de 4 strings, na ordem A, B, C, D
+- "answer": array de letras corretas, cada uma em ["A","B","C","D"] (ex.: ["C"] ou ["A","D"])
+- "explanation_cue": string curta do texto original
+
+NÃO escreva nada antes/depois do array. NÃO use aspas simples.
+--- CONTEÚDO PARA ANÁLISE ---
+{content}
+"""
+
     try:
+        # use o chat "normal" (menos tendência a explicar)
         response = client.chat.completions.create(
-            model="deepseek-reasoner",
+            model="deepseek-chat",
             messages=[
-                {"role": "system", "content": "Você é um assistente especialista em criar testes sobre Conceitos de dados do Azure, para que seu usuario demonstre o conhecimento fundamental dos principais conceitos de dados relacionados aos serviços de dados do Microsoft Azure."},
+                {"role": "system", "content": "Você é um gerador de testes. Saída EXCLUSIVAMENTE em JSON válido (array)."},
                 {"role": "user", "content": prompt},
             ],
-            stream=False, temperature=0.7, max_tokens=2048
+            temperature=0,  # ajuda a manter o formato
+            max_tokens=2048,
         )
-        json_response = response.choices[0].message.content.strip().replace('```json', '').replace('```', '').strip()
-        return json.loads(json_response)
+        raw = (response.choices[0].message.content or "").strip()
+
+        # --- extração robusta do primeiro array JSON ---
+        import re, json
+        m = re.search(r"\[.*\]", raw, re.DOTALL)
+        if not m:
+            raise ValueError("Não foi possível localizar um array JSON na resposta da API.")
+        json_text = m.group(0)
+
+        data = json.loads(json_text)  # se não for JSON válido, vai levantar aqui
+
+        # --- validação/normalização mínima ---
+        letter_set = {"A","B","C","D"}
+        norm = []
+        for i, q in enumerate(data):
+            # checa chaves essenciais
+            for k in ("question", "options", "answer", "explanation_cue"):
+                if k not in q:
+                    raise ValueError(f"Item {i+1}: chave ausente '{k}'.")
+            # options: 4 itens
+            if not isinstance(q["options"], list) or len(q["options"]) != 4:
+                raise ValueError(f"Item {i+1}: 'options' deve ter 4 itens.")
+            # answer: array de letras A–D
+            ans = q["answer"]
+            if isinstance(ans, str):
+                ans = [ans]  # tolera string única
+            if not isinstance(ans, list) or not all(isinstance(x, str) for x in ans):
+                raise ValueError(f"Item {i+1}: 'answer' deve ser array de letras.")
+            ans = [x.strip().upper() for x in ans]
+            if not all(x in letter_set for x in ans):
+                # tenta converter de índice ou de texto completo para letra
+                converted = []
+                for x in ans:
+                    # índice "0/1/2/3"
+                    if x.isdigit() and int(x) in range(4):
+                        converted.append("ABCD"[int(x)])
+                    else:
+                        # se vier o texto da opção, mapeia para a letra correspondente
+                        try:
+                            idx = q["options"].index(x)
+                            converted.append("ABCD"[idx])
+                        except ValueError:
+                            raise ValueError(f"Item {i+1}: valor de answer inválido: {x!r}")
+                ans = converted
+            # ordena para comparação consistente
+            ans = sorted(set(ans))
+            q["answer"] = ans
+            norm.append(q)
+
+        return norm
+
     except Exception as e:
-        messagebox.showerror("Erro de API", f"Ocorreu um erro: {e}")
+        messagebox.showerror("Erro de API", f"Ocorreu um erro ao processar a resposta da API: {e}")
         return None
+
 
 def find_explanation_in_text(full_text, cue):
     """Encontra o parágrafo no texto original que contém a pista da explicação."""
@@ -223,40 +278,65 @@ class QuizApp:
         self.submit_button = Button(self.current_frame, text="Submeter Resposta", command=self.check_answer, font=("Helvetica", 12, "bold"))
         self.submit_button.pack(pady=20)
 
+# main.py
+
     def check_answer(self):
         """Verifica a resposta do usuário, exibe o resultado e a explicação."""
         self.submit_button.config(state="disabled")
         for cb in self.option_labels: cb.config(state="disabled")
+        # --- INÍCIO DAS MUDANÇAS ---
 
+        # 1. Obter os dados da pergunta atual
+        q_data = self.questions[self.current_question_index]
+
+        # 2. Obter a resposta do usuário (o texto completo da opção)
         selected_answers = sorted([var.get() for var in self.option_vars if var.get()])
-        correct_answers = sorted(self.questions[self.current_question_index]['answer'])
-        
+
+        # 3. Obter a LETRA da resposta correta vinda da API (ex: ['C'])
+        api_answer_letters = q_data['answer'] 
+
+        # 4. Obter a lista com todos os textos das opções (ex: ["Opção A", "Opção B", ...])
+        all_option_texts = q_data['options']
+
+        # 5. TRADUZIR a letra da API para o texto completo da opção correta.
+        #    Para cada letra em 'api_answer_letters', encontramos o texto correspondente.
+        #    Assumimos que 'A' é o índice 0, 'B' é 1, 'C' é 2, 'D' é 3.
+        letter_map = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
+        correct_answers_text = sorted([
+            all_option_texts[letter_map[letter]] 
+            for letter in api_answer_letters if letter in letter_map
+        ])
+
+        # 6. Agora comparamos os textos completos!
+        is_correct = (selected_answers == correct_answers_text)
+
         self.user_answers.append({
-            "question": self.questions[self.current_question_index]['question'],
+            "question": q_data['question'],
             "selected": selected_answers,
-            "correct": correct_answers,
-            "is_correct": (selected_answers == correct_answers)
+            "correct": correct_answers_text, # <--- Usamos o texto traduzido para o log
+            "is_correct": is_correct 
         })
 
         # Pinta o fundo das respostas para dar feedback visual
         for cb in self.option_labels:
-            is_correct_option = cb['text'] in correct_answers
+            # A lógica de pintura agora usa 'correct_answers_text'
+            is_correct_option = cb['text'] in correct_answers_text
             was_selected = cb['text'] in selected_answers
 
             if is_correct_option:
-                # Pinta a opção correta de verde
                 cb.config(bg="#d4edda", fg="#155724", selectcolor="#d4edda")
             elif was_selected and not is_correct_option:
-                # Pinta a seleção incorreta do usuário de vermelho
                 cb.config(bg="#f8d7da", fg="#721c24", selectcolor="#f8d7da")
+
+        # --- FIM DAS MUDANÇAS --- (O resto da função permanece igual)
 
         explanation_frame = Frame(self.current_frame, bg="#e0e0e0", bd=1, relief="solid")
         explanation_frame.pack(fill="x", pady=10)
         Label(explanation_frame, text="Justificativa:", font=("Helvetica", 12, "bold"), bg="#e0e0e0").pack(anchor="w", padx=10, pady=(5,0))
-        
+
         explanation_cue = self.questions[self.current_question_index].get('explanation_cue', '')
         explanation_text = find_explanation_in_text(self.md_content, explanation_cue)
-        
+
         explanation_widget = scrolledtext.ScrolledText(explanation_frame, wrap=tk.WORD, height=4, font=("Helvetica", 11), bg="#e0e0e0", relief="flat")
         explanation_widget.insert(tk.END, explanation_text)
         explanation_widget.config(state="disabled")

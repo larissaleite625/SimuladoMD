@@ -1,0 +1,22 @@
+Relatório do Teste - 2025-08-12 22:17:28
+Arquivo Base: 1.1 Explore os principais conceitos de dados.md
+P1: Qual é a principal característica dos dados estruturados?
+  R: ['Obedecem a um esquema fixo'] | G: ['Obedecem a um esquema fixo'] | OK
+P2: Qual formato de arquivo é comumente usado para dados semiestruturados?
+  R: ['JSON'] | G: ['JSON'] | OK
+P3: Qual dos seguintes é um exemplo de dados não estruturados?
+  R: ['Documentos em formato JSON'] | G: ['Imagens e vídeos'] | X
+P4: Qual formato de arquivo é otimizado para armazenar e processar tipos de dados aninhados com eficiência?
+  R: ['ORC'] | G: ['Parquet'] | X
+P5: O que caracteriza um banco de dados relacional?
+  R: ['Armazena dados em formato de chave-valor'] | G: ['Usa chaves primárias para referenciar entidades em outras tabelas'] | X
+P6: Qual tipo de banco de dados não relacional é otimizado para análise e consulta de documentos JSON?
+  R: ['Banco de dados de documentos'] | G: ['Banco de dados de documentos'] | OK
+P7: Qual das seguintes é uma característica das transações ACID?
+  R: ['Cada transação é tratada como uma única unidade'] | G: ['Cada transação é tratada como uma única unidade'] | OK
+P8: O que é um data lake?
+  R: ['Um armazenamento de dados baseado em arquivo para análise em grande escala'] | G: ['Um armazenamento de dados baseado em arquivo para análise em grande escala'] | OK
+P9: Qual é a principal diferença entre um data warehouse e um data lakehouse?
+  R: ['Data lakehouses combinam armazenamento flexível com semântica de consulta relacional'] | G: ['Data lakehouses combinam armazenamento flexível com semântica de consulta relacional'] | OK
+P10: Para que são otimizados os modelos OLAP?
+  R: ['Cargas de trabalho analíticas com agregações pré-calculadas'] | G: ['Cargas de trabalho analíticas com agregações pré-calculadas'] | OK

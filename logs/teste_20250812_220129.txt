@@ -1,0 +1,22 @@
+Relatório do Teste - 2025-08-12 22:01:29
+Arquivo Base: Capítulo 1 (Completo)
+P1: Qual característica define dados semiestruturados?
+  R: ['Variação permitida entre instâncias de entidades'] | G: ['C'] | X
+P2: Qual formato de arquivo é otimizado para armazenar dados em colunas e contém metadados para localização eficiente de dados?
+  R: ['ORC'] | G: ['D'] | X
+P3: Qual propriedade ACID garante que transações concorrentes não interfiram umas nas outras?
+  R: ['Isolamento'] | G: ['C'] | X
+P4: Qual serviço do Azure é um banco de dados não relacional de escala global com suporte a múltiplas APIs?
+  R: ['Azure Cosmos DB'] | G: ['B'] | X
+P5: O que caracteriza um data lakehouse?
+  R: ['Combinação de armazenamento flexível de data lake com semântica de consulta relacional'] | G: ['B'] | X
+P6: Qual função é responsável por implementar pipelines para transferir e transformar dados entre sistemas?
+  R: ['Engenheiro de Dados'] | G: ['B'] | X
+P7: Qual formato de arquivo usa um cabeçalho JSON para descrever dados binários?
+  R: ['Parquet'] | G: ['C'] | X
+P8: O que a normalização em bancos de dados relacionais elimina?
+  R: ['Valores de dados duplicados'] | G: ['B'] | X
+P9: Qual serviço do Azure é usado para criar pipelines de ETL (extração, transformação e carregamento)?
+  R: ['Azure Data Factory'] | G: ['C'] | X
+P10: Qual tipo de banco de dados não relacional armazena valores como documentos JSON?
+  R: ['Documentos'] | G: ['B'] | X
