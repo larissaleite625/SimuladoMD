@@ -1,0 +1,22 @@
+Relatório do Teste - 2025-08-19 00:26:57
+Arquivo Base: 1.1 Explore os principais conceitos de dados.md
+P1: Qual é a principal característica dos dados estruturados?
+ R: ['Obedecem a um esquema fixo'] | G: ['Obedecem a um esquema fixo'] | OK
+P2: Qual formato de arquivo é amplamente substituído pelo JSON devido à sua menor verbosidade?
+ R: ['XML'] | G: ['XML'] | OK
+P3: Qual tipo de banco de dados não relacional é otimizado para análise e consulta de documentos JSON?
+ R: ['Bancos de dados de chave-valor'] | G: ['Bancos de dados de documentos'] | X
+P4: Qual das seguintes opções descreve melhor os dados não estruturados?
+ R: ['Dados sem nenhuma estrutura específica'] | G: ['Dados sem nenhuma estrutura específica'] | OK
+P5: Qual formato de arquivo é baseado em colunas e foi desenvolvido para otimizar operações no Apache Hive?
+ R: ['Parquet'] | G: ['ORC'] | X
+P6: O que significa a propriedade ACID 'Atomicidade' em sistemas OLTP?
+ R: ['As transações simultâneas não podem interferir entre si'] | G: ['Cada transação é tratada como uma única unidade, totalmente bem-sucedida ou que falha completamente'] | X
+P7: Qual é a principal diferença entre um data warehouse e um data lakehouse?
+ R: ['Data lakehouses combinam armazenamento flexível de um data lake com semântica de consulta relacional'] | G: ['Data lakehouses combinam armazenamento flexível de um data lake com semântica de consulta relacional'] | OK
+P8: Qual formato de arquivo é especialista em armazenar e processar tipos de dados aninhados com eficiência?
+ R: ['ORC'] | G: ['Parquet'] | X
+P9: Qual tipo de banco de dados armazena entidades como nós com links para definir relações entre eles?
+ R: ['Bancos de dados de grafo'] | G: ['Bancos de dados de grafo'] | OK
+P10: O que um modelo OLAP permite fazer com agregações de dados?
+ R: ['Fazer drill up/down para exibir agregações em vários níveis hierárquicos'] | G: ['Fazer drill up/down para exibir agregações em vários níveis hierárquicos'] | OK

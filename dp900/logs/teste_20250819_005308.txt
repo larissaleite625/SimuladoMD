@@ -1,0 +1,8 @@
+Relatório do Teste - 2025-08-19 00:53:08
+Arquivo Base: dp900 • Capítulo 2 (Completo)
+P1: Qual é a definição simplificada de normalização em bancos de dados relacionais?
+ R: ['Processo de design de esquema que minimiza a duplicação de dados e impõe a integridade dos dados.'] | G: ['Processo de design de esquema que minimiza a duplicação de dados e impõe a integridade dos dados.'] | OK
+P2: Qual das seguintes opções é um exemplo de abordagem IaaS no Azure?
+ R: ['SQL Server em VMs do Azure'] | G: ['SQL Server em VMs do Azure'] | OK
+P3: Qual recurso notável do MariaDB é mencionado no texto?
+ R: ['Integração nativa com blockchain.'] | G: ['Suporte interno para dados temporais.'] | X

@@ -54,3 +54,11 @@ Resultado: 0 acertos, 10 erros de 10 perguntas.
 Arquivo: 1.1 Explore os principais conceitos de dados.md
 Resultado: 7 acertos, 3 erros de 10 perguntas.
 
+--- TESTE REALIZADO EM 2025-08-19 00:47:18 ---
+Arquivo: dp900 • Capítulo 3 (Completo)
+Resultado: 1 acertos, 2 erros de 3 perguntas.
+
+--- TESTE REALIZADO EM 2025-08-19 00:53:08 ---
+Arquivo: dp900 • Capítulo 2 (Completo)
+Resultado: 2 acertos, 1 erros de 3 perguntas.
+

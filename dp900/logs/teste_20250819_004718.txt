@@ -1,0 +1,8 @@
+Relatório do Teste - 2025-08-19 00:47:18
+Arquivo Base: dp900 • Capítulo 3 (Completo)
+P1: Qual é o tamanho máximo de um blob de blocos no Armazenamento de Blobs do Azure?
+ R: ['Até 100 TB'] | G: ['Até 190,7 TiB'] | X
+P2: Qual camada de acesso no Armazenamento de Blobs do Azure tem a maior latência de leitura?
+ R: ['Camada Quente'] | G: ['Camada Arquivo'] | X
+P3: Qual é a principal diferença entre o Azure Data Lake Storage Gen1 e Gen2?
+ R: ['Gen2 é integrado ao Armazenamento do Azure'] | G: ['Gen2 é integrado ao Armazenamento do Azure'] | OK
