@@ -1,0 +1,22 @@
+Relatório do Teste - 2025-08-27 01:07:41
+Arquivo Base: sc900 • Capítulo 1 (Completo)
+P1: No modelo de responsabilidade compartilhada, qual é a responsabilidade do cliente em um ambiente SaaS?
+ R: ['Gerenciar dados, dispositivos, contas e identidades'] | G: ['Gerenciar dados, dispositivos, contas e identidades'] | OK
+P2: Qual princípio do modelo de Confiança Zero envolve autenticar com base em identidade, localização e outros pontos de dados?
+ R: ['Acesso com privilégios mínimos'] | G: ['Verificar explicitamente'] | X
+P3: Qual tipo de criptografia usa uma única chave para criptografar e descriptografar?
+ R: ['Criptografia de hash'] | G: ['Criptografia simétrica'] | X
+P4: O que é um hash em segurança cibernética?
+ R: ['Um certificado digital para verificar identidades'] | G: ['Um valor de comprimento fixo único gerado a partir de texto usando um algoritmo'] | X
+P5: Qual camada da defesa em profundidade inclui autenticação multifator?
+ R: ['Segurança física'] | G: ['Controles de segurança de identidade e acesso'] | X
+P6: No modelo de responsabilidade compartilhada, quem gerencia aplicativos e dados em PaaS?
+ R: ['Cliente'] | G: ['Cliente'] | OK
+P7: Qual componente da tríade CIA garante que os dados estejam acessíveis quando necessário?
+ R: ['Confidencialidade'] | G: ['Disponibilidade'] | X
+P8: O que é necessário para descriptografar uma mensagem criptografada com uma chave pública em criptografia assimétrica?
+ R: ['A chave privada correspondente'] | G: ['A chave privada correspondente'] | OK
+P9: Qual pilar do modelo de Confiança Zero envolve monitorar dispositivos para integridade?
+ R: ['Identidades'] | G: ['Dispositivos'] | X
+P10: O que a conformidade em GRC exige das organizações?
+ R: ['Implementar segurança máxima em todos os aspectos'] | G: ['Seguir padrões mínimos legalmente obrigatórios'] | X
